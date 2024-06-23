@@ -1,0 +1,8 @@
+prefix=/home/redwan/autonomous_private/devel
+
+Name: vesc_msgs
+Description: Description of vesc_msgs
+Version: 0.0.1
+Cflags: -I/home/redwan/autonomous_private/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime

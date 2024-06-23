@@ -1,0 +1,8 @@
+prefix=/home/redwan/autonomous_private/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/redwan/autonomous_private/src/serial/include
+Libs: -L${prefix}/lib -lserial -lrt -lpthread
+Requires: 

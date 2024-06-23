@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/redwan/autonomous_private/devel/lib/serial/serial_example  -Wl,-rpath,/home/redwan/autonomous_private/devel/lib /home/redwan/autonomous_private/devel/lib/libserial.so -lrt -lpthread 

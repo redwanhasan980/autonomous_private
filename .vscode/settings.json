@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/redwan/autonomous_private/devel/lib/python3/dist-packages",
+        "/home/redwan/f1tenth_ws/devel/lib/python3/dist-packages",
+        "/home/redwan/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/redwan/autonomous_private/devel/lib/python3/dist-packages",
+        "/home/redwan/f1tenth_ws/devel/lib/python3/dist-packages",
+        "/home/redwan/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}
