@@ -8,7 +8,9 @@ from std_msgs.msg import Float64
 import numpy as np
 angle_range = 180
 car_length = 1.5
-vel = 5
+vel = 6
+max_vel=12
+is_straight=False
 pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
 
 def find_max_distance_angle(adjusted_distances, start_index=220):
@@ -31,11 +33,21 @@ def find_max_distance_angle(adjusted_distances, start_index=220):
     # Extract the sublist within the specified range
     sublist = adjusted_distances[start_index:end_index]
 
-    # Find the tuple with the maximum distance in the sublist
+    # Find the tuple with the maximum distance in the sublis
     max_distance_pair = max(sublist, key=lambda x: x[1])
-    
-    # Return the angle and the maximum distance of that tuple
-    return max_distance_pair
+    max_distance = max_distance_pair[1]
+
+    if max_distance > 8:
+        # Filter out all tuples where the distance is greater than 8
+        filtered_tuples = [t for t in sublist if t[1] > 8]
+        
+        # Find the middle angle of these filtered tuples
+        middle_index = len(filtered_tuples) // 2
+        middle_angle = filtered_tuples[middle_index][0]
+        
+        return middle_angle, max_distance
+    else:
+        return max_distance_pair
 
 def adjust_for_disparities(distances, angle_increment, angle_range=0.12):
     """
@@ -152,12 +164,12 @@ def callback(data):
     # for angle, dist in post_dis:
     #     print(f"Angle_post: {angle}, Distance_post: {dist}")
     max_angel=find_max_distance_angle(post_dis)
-    print(f"Angle_post: {max_angel[0]}, Distance_post: {max_angel[1]}")
+    print(f" Max Angel {max_angel[0]}, Max Distance : {max_angel[1]}")
     left,right=check_distances_for_sides(post_dis,0.30)
     # print(f"left: {left}, right: {right}")
     msg = drive_param()
     if max_angel[1]>8:
-        msg.velocity = 8
+        msg.velocity = max_vel
     else :
         msg.velocity = vel
     # if left == True:
