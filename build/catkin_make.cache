@@ -1,2 +1,2 @@
-f1_10_sim-master/race:racecar-simulator-master/racecar_control:racecar-simulator-master/racecar_description:racecar-simulator-master/racecar_gazebo:racecar/ackermann_cmd_mux:racecar/racecar:serial:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs
+ackermann_msgs:f1_10_sim-master/race:racecar-simulator-master/racecar_control:racecar-simulator-master/racecar_description:racecar-simulator-master/racecar_gazebo:racecar/ackermann_cmd_mux:racecar/racecar:serial:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs
 -DCATKIN_DEVEL_PREFIX=/home/redwan/autonomous_private/devel -DCMAKE_INSTALL_PREFIX=/home/redwan/autonomous_private/install -G Unix Makefiles

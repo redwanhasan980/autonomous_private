@@ -23,7 +23,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/redwan/autonomous_private/src/vesc/vesc_ackermann/include"
   "/home/redwan/autonomous_private/devel/include"
-  "/home/redwan/f1tenth_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
